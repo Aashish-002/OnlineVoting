@@ -30,12 +30,12 @@ const Login = () => {
      
   
      
-    const user = Object.values(voterUsers).find(
-      user => user.voterID === voterID 
+      const user = Object.values(voterUsers).find(
+        user => user.voterID === voterID 
     );
-     var email=user.email
+    //  var email=user.email
      
-     console.log(email)
+    //  console.log(email)
     if (user) {
       setIsValid(true);
       // setEmail(email)
@@ -54,7 +54,7 @@ const Login = () => {
     e.preventDefault();
       if(genOtp===otp){
         setIsVerified(true);
-        route.push('/')
+        route.push('/profile')
       }
       else{
         setIsVerified(false);
